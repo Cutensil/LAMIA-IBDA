@@ -1,0 +1,19 @@
+# Install a matching torch/torchvision pair with RoIAlign and NMS first. See README.md.
+addict==2.4.0
+faster-coco-eval==1.7.2
+matplotlib==3.11.0
+numpy==2.4.4
+opencv-python==5.0.0.93
+packaging==26.0
+pillow==12.2.0
+pycocotools==2.0.11
+pyyaml==6.0.3
+rich==15.0.0
+shapely==2.1.2
+six==1.17.0
+tensorboard==2.21.0
+termcolor==3.3.0
+terminaltables==3.1.10
+tqdm==4.68.3
+transformers==4.51.3
+yapf==0.43.0
