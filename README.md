@@ -1,8 +1,10 @@
-# Lamia
+![](assets/lamia-banner.png)
 
-Lamia is a vision-language framework for **instance-level building damage assessment**. Given pre- and post-disaster remote sensing images of the same area, it predicts a bounding box, an instance mask, and a damage class for each building. This repository provides training, evaluation, and single-pair inference scripts for BRIGHT and xBD.
+# LAMIA: Language-guided Adaptive Multimodal Integration and Alignment
 
-Lamia uses a bitemporal PVT-v2-B3 backbone, an FPN, and a three-stage cascade detection head. Adaptive Text–Visual Alignment (ATVA) adapts representations of damage descriptions based on local regions in the two images. Dynamic Instance Prototype Grounding (DIPG) aggregates the corresponding text prototypes for each building proposal to distinguish damage levels.
+LAMIA is a vision-language framework for **instance-level building damage assessment**. Given pre- and post-disaster remote sensing images of the same area, it predicts a bounding box, an instance mask, and a damage class for each building. This repository provides training, evaluation, and single-pair inference scripts for BRIGHT and xBD.
+
+LAMIA uses a bitemporal PVT-v2-B3 backbone, an FPN, and a three-stage cascade detection head. Adaptive Text–Visual Alignment (ATVA) adapts representations of damage descriptions based on local regions in the two images. Dynamic Instance Prototype Grounding (DIPG) aggregates the corresponding text prototypes for each building proposal to distinguish damage levels.
 
 [News](#news) · [Installation](#installation) · [Training, Evaluation, and Inference](#training-evaluation-and-inference)
 
@@ -84,7 +86,7 @@ Prepare the following checkpoints before training.
 
 You can set the paths for the two checkpoints in `config/_base_/paths.py`. The defaults are `checkpoints/bge-small-en` and `checkpoints/pvt-v2-b3.pth`, respectively.
 
-To use our trained model for evaluation or inference, download the Lamia weights using the links below.
+To use our trained model for evaluation or inference, download the LAMIA weights using the links below.
 
 - [Google Drive](https://drive.google.com/drive/folders/1OqMuvXcpn0625xNpa4YQYZdEDDsa2Q9B)
 - [Baidu Netdisk](https://pan.baidu.com/s/1n_Cyb--0bss193ANfaHT5Q) (password: 43by)
