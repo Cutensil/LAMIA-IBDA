@@ -4,7 +4,7 @@
 
 LAMIA is a vision-language framework for **instance-level building damage assessment**. Given pre- and post-disaster remote sensing images of the same area, it predicts a bounding box, an instance mask, and a damage class for each building. This repository provides training, evaluation, and single-pair inference scripts for BRIGHT and xBD.
 
-LAMIA uses a bitemporal PVT-v2-B3 backbone, an FPN, and a three-stage cascade detection head. Adaptive Text–Visual Alignment (ATVA) adapts representations of damage descriptions based on local regions in the two images. Dynamic Instance Prototype Grounding (DIPG) aggregates the corresponding text prototypes for each building proposal to distinguish damage levels.
+LAMIA uses a bitemporal PVT-v2 backbone, an FPN, and a three-stage cascade detection head. Adaptive Text–Visual Alignment (ATVA) adapts representations of damage descriptions based on local regions in the two images. Dynamic Instance Prototype Grounding (DIPG) aggregates the corresponding text prototypes for each building proposal to distinguish damage levels.
 
 [News](#news) · [Installation](#installation) · [Training, Evaluation, and Inference](#training-evaluation-and-inference)
 
@@ -109,9 +109,13 @@ Use `--work-dir` to set the output directory. The default is `./work_dirs/<confi
 
 ### Evaluation
 
+Run the following command to evaluate LAMIA on the BRIGHT test set. Replace `/path/to/lamia_bright.pth` with the path to your BRIGHT checkpoint.
+
 ```bash
 python tools/test.py config/lamia_bright.py /path/to/lamia_bright.pth
 ```
+
+The script uses the test images and COCO annotations specified in the configuration and reports COCO metrics for bounding boxes (`coco/bbox_mAP`) and instance masks (`coco/segm_mAP`).
 
 ### Inference
 
